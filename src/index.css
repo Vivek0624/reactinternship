@@ -1,0 +1,454 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/*  global classes */
+
+/* section */
+
+.header-p {
+  height: 3.4rem;
+  background-color: #222;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.heading-profile {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  margin-top: 1.2rem;
+  margin-right: 3rem;
+  margin-bottom: 1.4rem;
+  padding: 0.4rem;
+  color: rgba(255, 255, 255, 0.377);
+  border-radius: 10px;
+}
+
+.backgroundImage--1 {
+  height: 26rem;
+  width: 100%;
+}
+
+article {
+  background-color: #222;
+  padding: 2rem 2rem;
+}
+
+article h3 {
+  color: rgb(153, 153, 153);
+  font-size: 1.2rem;
+}
+
+article h3 span {
+  color: rgba(245, 100, 100, 0.836);
+}
+
+article h2 {
+  color: #fff;
+}
+
+article .calender {
+  color: rgba(163, 60, 0, 0.822);
+}
+
+article h4 {
+  color: rgba(182, 19, 19, 0.699);
+}
+
+.register-section {
+  background-color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+.registration-main {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.registration-main h2,
+p {
+  color: #fff;
+}
+
+.topReg-container {
+  background-color: #333;
+  border-radius: 10px;
+  padding: 1rem 0 0 1.6rem;
+}
+
+.mainReg-container {
+  display: flex;
+}
+
+.main-img img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50px;
+  margin-right: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.main-text h3 {
+  color: #fff;
+}
+
+.main-text p {
+  color: rgba(255, 255, 255, 0.411);
+}
+
+.Btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2.6rem;
+  width: 9rem;
+}
+
+.Btn h4 {
+  padding: 1rem;
+  background-color: rgba(245, 100, 100, 0.836);
+  border-radius: 10px;
+  color: #fff;
+}
+
+/* LEFT SIDE CONTAINER  */
+
+.secondReg-container {
+  display: flex;
+  margin-right: 3rem;
+}
+
+.second-img img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50px;
+  margin-right: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.second-text h3 {
+  color: #fff;
+}
+
+.second-text p {
+  color: rgba(255, 255, 255, 0.411);
+}
+
+.mainLink h4 {
+  color: rgba(20, 59, 167, 0.726);
+  padding: 1rem;
+
+  border-radius: 10px;
+}
+
+hr {
+  border: solid #333 1px;
+  width: 18rem;
+}
+
+.registration-details .locationMain {
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 1rem 0.6rem;
+}
+
+.registration-details .locationDetail {
+  color: #fff;
+}
+
+.eventDetails {
+  background-color: #333;
+  /* padding: 0.4rem; */
+  border-radius: 10px;
+  margin: 1.2rem 1rem 0 0;
+}
+
+.eventDetails h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .register-section {
+    display: block;
+  }
+
+  .topReg-container {
+    margin-bottom: 1rem;
+  }
+}
+
+.personIcon {
+  margin-right: 0.6rem;
+}
+
+.mainCalenderIcon {
+  margin-right: 0.6rem;
+}
+
+.calenderIcon {
+  color: #fff;
+  margin-left: 0.6rem;
+}
+
+.shareEventicon {
+  margin-right: 0.7rem;
+}
+
+/* Form section  */
+
+.FormSection {
+  height: 100vh;
+  background-color: #222;
+}
+
+/* REGISTER FORM  */
+
+.container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.brand {
+  text-align: center;
+}
+
+.brand span {
+  color: #fff;
+}
+
+.wrapper {
+  box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+}
+
+.wrapper > * {
+  padding: 1em;
+}
+
+.company-info {
+  background: #c9e6ff;
+}
+
+.company-info h3,
+.company-info ul {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.contact {
+  background: #f9feff;
+}
+
+/* FORM STYLES */
+.contact form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.contact form label {
+  display: block;
+  color: #222;
+}
+
+.contact form p {
+  margin: 0;
+}
+
+.contact form .full {
+  grid-column: 1 / 3;
+}
+
+.contact form button,
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #c9e6ff;
+}
+
+.contact form button {
+  background: #c9e6ff;
+  border: 0;
+  text-transform: uppercase;
+}
+
+.contact form button:hover,
+.contact form button:focus {
+  background: #92bde7;
+  color: #fff;
+  outline: 0;
+  transition: background-color 2s ease-out;
+}
+
+.alert {
+  text-align: center;
+  padding: 10px;
+  background: #79c879;
+  color: #fff;
+  margin-bottom: 10px;
+  display: none;
+}
+
+/* LARGE SCREENS */
+@media (min-width: 700px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .wrapper > * {
+    padding: 2em;
+  }
+
+  .company-info h3,
+  .company-info ul,
+  .brand {
+    text-align: left;
+  }
+}
+
+.infosResults div p {
+  width: 80%;
+  margin: 30px auto;
+  background: rgb(224, 224, 224);
+  padding: 20px;
+  border-bottom: 3px solid lightgray;
+  box-shadow: 0 0 20px 0 rgba(20, 20, 20, 0.7);
+}
